@@ -25,7 +25,7 @@ module.exports = (testing = 'source', settings) => {
             '<rootDir>/dist',
         ],
         moduleNameMapper: isTestingBundle ? {
-            '../src': '../dist',
+            '(.*)src(.*)': '$1dist$2',
         } : {},
         ...settings,
     };
