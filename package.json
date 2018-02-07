@@ -1,0 +1,24 @@
+{
+  "name": "socifi-jest-config",
+  "version": "1.0.0",
+  "description": "SOCIFI default jest config",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/socifi/socifi-jest-config"
+  },
+  "author": "Michal Ozogán <michal@socifi.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/socifi/socifi-jest-config",
+  "dependencies": {
+    "babel-jest": "^22.1.0",
+    "jest": "^22.1.4",
+    "jest-junit": "^3.5.0",
+    "socifi-rollup-config": "^1.1.0"
+  },
+  "keywords": [
+    "jest",
+    "jest-config",
+    "jestconfig"
+  ]
+}
