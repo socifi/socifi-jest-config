@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 
 
+## [1.2.0] 2018-02-12
+### Added
+- Add compiling for ui-models private library.
+
+### Changed
+- Set files that will be included in coverage.
+
+
 ## [1.1.0] 2018-02-08
 ### Added
 - Add compiling for ui-models private library.

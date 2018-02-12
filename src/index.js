@@ -17,12 +17,13 @@ module.exports = (testing = 'source', settings) => {
         collectCoverage: !isTestingBundle,
         coverageDirectory: 'tests_results/coverage',
         testResultsProcessor: 'jest-junit',
+        collectCoverageFrom: ['src/**/*.{js,jsx}'],
         coverageReporters: ['text', 'cobertura', 'lcov'],
         projects: [
             'tests',
         ],
         transformIgnorePatterns: [
-            '<rootDir>/node_modules/(?!(ui-constants/src|ui-models/src)/)',
+            '<rootDir>/node_modules/(?!(ui-constants/src|ui-models/src|ui-admin-api-service/src|ui-storages/src|ui-auths/src)/)',
             '<rootDir>/dist',
         ],
         moduleNameMapper: isTestingBundle ? {
