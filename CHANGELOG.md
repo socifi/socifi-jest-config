@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 
 
+## [1.3.0] 2018-02-13
+### Added
+- Add loading of css modules
+
+
 ## [1.2.0] 2018-02-12
 ### Added
 - Add compiling for ui-models private library.
