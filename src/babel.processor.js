@@ -5,7 +5,17 @@ const config = getBaseBabelConfig('commonjs');
 
 module.exports = babelJest.createTransformer({
     ...config,
-    plugins: config.plugins.filter((item) => {
-        return item !== 'external-helpers';
-    }),
+    plugins: [
+        ...config.plugins.filter((item) => {
+            return item !== 'external-helpers';
+        }),
+        [
+            'transform-runtime',
+            {
+                helpers: false,
+                polyfill: false,
+                regenerator: true,
+            },
+        ],
+    ],
 });
