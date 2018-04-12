@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 
 
+## [1.5.0] 2018-04-12
+### Changed
+- Change package name in npm
+
+
 ## [1.4.0] 2018-03-28
 ### Added
 - Add babel plugin transform-runtime to handle async/await functions
