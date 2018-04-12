@@ -1,5 +1,7 @@
 # SOCIFI Default Jest Configuration
 
+[![npm version](https://badge.fury.io/js/socifi-jest-config.svg)](https://badge.fury.io/js/socifi-jest-config)
+
 This is default configuration for jest that test our javascript libraries.
 
 ## What is included

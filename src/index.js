@@ -23,14 +23,15 @@ module.exports = (testing = 'source', settings) => {
             'tests',
         ],
         transformIgnorePatterns: [
-            '<rootDir>/node_modules/(?!(ui-constants/src|ui-models/src|ui-admin-api-service/src|ui-storages/src|ui-auths/src|ui-forms/src)/)',
+            '<rootDir>/node_modules/(?!(ui-constants/src|ui-models/src|ui-admin-api-service/src|ui-storages/src|' +
+            'ui-auths/src|ui-forms/src)/)',
             '<rootDir>/dist',
         ],
         moduleNameMapper: {
             '\\.(css|less)$': 'identity-obj-proxy',
             ...(isTestingBundle ? {
                 '(.*)src(.*)': '$1dist$2',
-            } : {})
+            } : {}),
         },
         ...settings,
     };
