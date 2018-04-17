@@ -1,5 +1,5 @@
 const babelJest = require('babel-jest');
-const { getBaseBabelConfig } = require('socifi-rollup-config/src/helpers');
+const { getBaseBabelConfig } = require('@socifi/rollup-config/src/helpers');
 
 const config = getBaseBabelConfig('commonjs');
 

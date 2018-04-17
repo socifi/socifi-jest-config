@@ -8,7 +8,7 @@ const path = require('path');
  * @returns {Object} Jest settings
  */
 module.exports = (testing = 'source', settings) => {
-    const isTestingBuild = testing === 'bundle' | testing === 'build';
+    const isTestingBuild = testing === 'bundle' || testing === 'build';
     const transformIgnoredPackages = ['ui-constants', 'ui-models', 'ui-admin-api-service', 'ui-storages', 'ui-auths'];
 
     process.env.JEST_JUNIT_OUTPUT = `./tests_results/unit/junit${isTestingBuild ? '-bundle' : ''}.xml`;
