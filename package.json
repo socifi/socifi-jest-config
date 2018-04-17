@@ -1,32 +1,36 @@
 {
   "name": "@socifi/jest-config",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "SOCIFI default jest config",
   "main": "./src/index.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/socifi/socifi-jest-config"
   },
+  "bugs": {
+    "url": "https://github.com/socifi/socifi-jest-config/issues"
+  },
+  "homepage": "https://github.com/socifi/socifi-jest-config",
   "author": "Michal Ozogán <michal@socifi.com>",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/socifi/socifi-jest-config",
+  "keywords": [
+    "jest",
+    "jest-config",
+    "jestconfig"
+  ],
+  "scripts": {
+    "lint": "eslint ./src/*.js",
+    "lint-export": "npm run lint -o ./tests_results/checkstyle/js-checkstyle.xml -f checkstyle"
+  },
   "dependencies": {
     "babel-jest": "^22.4.3",
     "babel-plugin-transform-runtime": "^6.23.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.4.3",
     "jest-junit": "^3.6.0",
-    "socifi-rollup-config": "^1.6.1"
+    "@socifi/rollup-config": "^1.7.0"
   },
-  "keywords": [
-    "jest",
-    "jest-config",
-    "jestconfig"
-  ],
   "devDependencies": {
     "@socifi/eslint-config": "^1.6.2"
-  },
-  "scripts": {
-    "lint": "eslint ./src/*.js"
   }
 }

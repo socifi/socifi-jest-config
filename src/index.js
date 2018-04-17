@@ -1,20 +1,21 @@
 const path = require('path');
 
 /**
- * Get Jest configuration file.
+ * Get Jest configuration.
  *
- * @param {string} testing - Testing source code or bundle?
+ * @param {string} testing - Testing source code or built code?
  * @param {Object} settings - Extendable settings
  * @returns {Object} Jest settings
  */
 module.exports = (testing = 'source', settings) => {
-    const isTestingBundle = testing === 'bundle';
+    const isTestingBuild = testing === 'bundle' | testing === 'build';
+    const transformIgnoredPackages = ['ui-constants', 'ui-models', 'ui-admin-api-service', 'ui-storages', 'ui-auths'];
 
-    process.env.JEST_JUNIT_OUTPUT = `./tests_results/unit/junit${isTestingBundle ? '-bundle' : ''}.xml`;
+    process.env.JEST_JUNIT_OUTPUT = `./tests_results/unit/junit${isTestingBuild ? '-bundle' : ''}.xml`;
 
     return {
         transform: { '.*': path.resolve(__dirname, 'babel.processor.js') },
-        collectCoverage: !isTestingBundle,
+        collectCoverage: !isTestingBuild,
         coverageDirectory: 'tests_results/coverage',
         testResultsProcessor: 'jest-junit',
         collectCoverageFrom: ['src/**/*.{js,jsx}'],
@@ -23,13 +24,12 @@ module.exports = (testing = 'source', settings) => {
             'tests',
         ],
         transformIgnorePatterns: [
-            '<rootDir>/node_modules/(?!(ui-constants/src|ui-models/src|ui-admin-api-service/src|ui-storages/src|' +
-            'ui-auths/src|ui-forms/src)/)',
+            `<rootDir>/node_modules/(?!(${transformIgnoredPackages.map(item => `${item}/src`).join('|')})/)`,
             '<rootDir>/dist',
         ],
         moduleNameMapper: {
             '\\.(css|less)$': 'identity-obj-proxy',
-            ...(isTestingBundle ? {
+            ...(isTestingBuild ? {
                 '(.*)src(.*)': '$1dist$2',
             } : {}),
         },
