@@ -1,6 +1,7 @@
 # SOCIFI Default Jest Configuration
 
 [![npm version](https://badge.fury.io/js/%40socifi%2Fjest-config.svg)](https://badge.fury.io/js/%40socifi%2Fjest-config)
+[![CircleCI](https://circleci.com/gh/socifi/jest-config/tree/master.svg?style=shield)](https://circleci.com/gh/socifi/jest-config/tree/master)
 
 This is default configuration for jest that test our javascript libraries.
 
@@ -12,7 +13,7 @@ All tests results are generated to tests_results folder. Default folders:
 
 - ./tests - For your test code. All files should be in format *.test.js
 - ./src - Your source code
-- ./dist - Your compiled bundle.
+- ./dist - Your compiled source code.
 
 ## How to use it
 
@@ -30,10 +31,10 @@ module.exports = require('@socifi/jest-config')();
 
 This will test your code in src directory and it will generate junit.xml file and coverage report. 
 
-If you want to test your compiled bundle, use:
+If you want to test your build files, use:
 
  ```javascript
- module.exports = require('@socifi/jest-config')('bundle');
+ module.exports = require('@socifi/jest-config')('build');
  ```
  
  Coverage tests are skipped and junit tests will generate junit-bundle.xml file. During the tests all your links to src folder will be replace with link to dist folder.
