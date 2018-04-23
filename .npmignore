@@ -1,3 +1,4 @@
 .idea
-.eslintrc.js
+tests
 .circleci
+release.config.js
