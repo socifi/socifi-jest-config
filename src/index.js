@@ -9,7 +9,7 @@ const path = require('path');
  */
 module.exports = (testing = 'source', settings) => {
     const isTestingBuild = testing === 'bundle' || testing === 'build';
-    const transformIgnoredPackages = ['ui-constants', 'ui-models', 'ui-admin-api-service', 'ui-storages', 'ui-auths'];
+    const transformIgnoredPackages = ['ui-constants', 'ui-models', 'ui-admin-api-service', 'ui-storages', 'ui-auths', '@socifi/([a-z]|-)*'];
 
     process.env.JEST_JUNIT_OUTPUT = `./tests_results/unit/junit${isTestingBuild ? '-bundle' : ''}.xml`;
 
