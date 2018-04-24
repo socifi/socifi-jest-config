@@ -1,6 +1,6 @@
 {
   "name": "@socifi/jest-config",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "SOCIFI default jest config",
   "main": "./src/index.js",
   "repository": {

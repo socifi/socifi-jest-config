@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 
+## [1.9.0] 2018-04-24
+### Changed
+- [RND-11](https://socifi.atlassian.net/browse/RND-11) Use custom transfomer for new socifi npm packages
+
 ## [1.8.0] 2018-04-23
 ### Changed
 - [RND-9](https://socifi.atlassian.net/browse/RND-9) Use context in circleci
