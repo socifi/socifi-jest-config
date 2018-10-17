@@ -33,6 +33,7 @@ module.exports = (testing = 'source', settings) => {
                 '(.*)src(.*)': '$1dist$2',
             } : {}),
         },
+        testURL: 'http://localhost/',
         ...settings,
     };
 };
