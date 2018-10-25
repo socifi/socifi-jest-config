@@ -9,20 +9,21 @@ const path = require('path');
  */
 module.exports = (testing = 'source', settings) => {
     const isTestingBuild = testing === 'bundle' || testing === 'build';
-    const transformIgnoredPackages = ['ui-constants', 'ui-models', 'ui-admin-api-service', 'ui-storages', 'ui-auths', '@socifi/([a-z]|-)*'];
+    const transformIgnoredPackages = ['@socifi/([a-z]|-)*'];
 
     process.env.JEST_JUNIT_OUTPUT = `./tests_results/unit/junit${isTestingBuild ? '-bundle' : ''}.xml`;
 
     return {
         transform: { '.*': path.resolve(__dirname, 'babel.processor.js') },
+        setupTestFrameworkScriptFile: path.resolve(__dirname, 'setup.js'),
         collectCoverage: !isTestingBuild,
         coverageDirectory: 'tests_results/coverage',
-        testResultsProcessor: 'jest-junit',
-        collectCoverageFrom: ['src/**/*.{js,jsx}'],
+        reporters: ['default', 'jest-junit'],
+        collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}'],
         coverageReporters: ['text', 'cobertura', 'lcov'],
-        projects: [
-            'tests',
-        ],
+        moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+        moduleDirectories: ['node_modules', 'src'],
+        testMatch: ['<rootDir>/tests/**/*.test.*'],
         transformIgnorePatterns: [
             `<rootDir>/node_modules/(?!(${transformIgnoredPackages.map(item => `${item}/src`).join('|')})/)`,
             '<rootDir>/dist',

@@ -1,21 +1,6 @@
 const babelJest = require('babel-jest');
-const { getBaseBabelConfig } = require('@socifi/rollup-config/src/helpers');
+const getBaseBabelConfig = require('@socifi/babel-config');
 
-const config = getBaseBabelConfig('commonjs');
+const { extensions, ...config } = getBaseBabelConfig();
 
-module.exports = babelJest.createTransformer({
-    ...config,
-    plugins: [
-        ...config.plugins.filter((item) => {
-            return item !== 'external-helpers';
-        }),
-        [
-            'transform-runtime',
-            {
-                helpers: false,
-                polyfill: false,
-                regenerator: true,
-            },
-        ],
-    ],
-});
+module.exports = babelJest.createTransformer(config);

@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/socifi/jest-config"
+    "url": "https://github.com/socifi/jest-config.git"
   },
   "bugs": {
     "url": "https://github.com/socifi/jest-config/issues"
@@ -19,21 +19,27 @@
     "jestconfig"
   ],
   "scripts": {
-    "lint": "eslint ./src/*.js",
+    "lint": "eslint ./src",
     "release": "semantic-release"
   },
   "dependencies": {
+    "@babel/core": "^7.1.2",
+    "@socifi/babel-config": "^0.4.0",
+    "@types/jest": "^23.3.7",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "jest-junit": "^5.2.0",
-    "@socifi/rollup-config": "^1.10.0"
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
   },
   "devDependencies": {
     "@socifi/commitlint-config": "^1.0.0",
-    "@socifi/eslint-config": "^1.8.1",
-    "@socifi/semantic-release-config": "^0.9.0",
+    "@socifi/eslint-config": "^2.0.0",
+    "@socifi/semantic-release-config": "^1.0.1",
     "husky": "^1.1.2"
   }
 }
