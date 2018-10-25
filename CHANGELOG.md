@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 
+## [2.0.0] 2018-10-25
+### Added
+- Support for typescript and enzyme BREAKING
+
 ## [1.10.0] 2018-10-17
 ### Changed
 - Updated version of jest and config to be compatible.
