@@ -30,7 +30,7 @@ module.exports = (testing = 'source', settings) => {
             '<rootDir>/dist',
         ],
         moduleNameMapper: {
-            '\\.(css|less)$': 'identity-obj-proxy',
+            '\\.(scss|css|less)$': 'identity-obj-proxy',
             ...(isTestingBuild ? {
                 '(.*)src(.*)': '$1dist$2',
             } : {}),
