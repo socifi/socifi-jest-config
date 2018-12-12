@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 
 
+## [2.2.0] 2018-12-12
+### Other
+- Merge remote-tracking branch 'origin/master'
+
+### Changed
+- Use local babel settings on default
+
 ## [2.1.0] 2018-11-16
 ### Added
 - Support for scss files
