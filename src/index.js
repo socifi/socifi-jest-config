@@ -1,3 +1,4 @@
+// eslint-disable-next-line typescript/no-var-requires
 const path = require('path');
 
 /**
@@ -14,7 +15,7 @@ module.exports = (testing = 'source', settings) => {
     process.env.JEST_JUNIT_OUTPUT = `./tests_results/unit/junit${isTestingBuild ? '-bundle' : ''}.xml`;
 
     return {
-        transform: { '.*': path.resolve(__dirname, 'babel.processor.js') },
+        transform: { '.*': 'babel-jest' },
         setupTestFrameworkScriptFile: path.resolve(__dirname, 'setup.js'),
         collectCoverage: !isTestingBuild,
         coverageDirectory: 'tests_results/coverage',

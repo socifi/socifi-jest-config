@@ -24,7 +24,6 @@
   },
   "dependencies": {
     "@babel/core": "^7.1.2",
-    "@socifi/babel-config": "^0.4.0",
     "@types/jest": "^23.3.7",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
@@ -38,7 +37,7 @@
   },
   "devDependencies": {
     "@socifi/commitlint-config": "^1.0.0",
-    "@socifi/eslint-config": "^2.0.0",
+    "@socifi/eslint-config": "^2.5.0",
     "@socifi/semantic-release-config": "^1.0.1",
     "husky": "^1.1.2"
   }
