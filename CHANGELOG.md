@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 
+## [2.3.0] 2019-03-11
+### Changed
+- Update packages versions
+
 ## [2.2.0] 2018-12-12
 ### Other
 - Merge remote-tracking branch 'origin/master'
