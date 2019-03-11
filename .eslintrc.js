@@ -3,6 +3,6 @@ module.exports = {
         '@socifi',
     ],
     rules: {
-        'typescript/no-var-requires': 0,
+        '@typescript-eslint/no-var-requires': 0,
     },
 };
