@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 
+## [2.3.1] 2019-03-19
+### Fixed
+- Versioning of libraries
+
 ## [2.3.0] 2019-03-11
 ### Changed
 - Update packages versions
