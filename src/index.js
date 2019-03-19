@@ -16,7 +16,7 @@ module.exports = (testing = 'source', settings) => {
 
     return {
         transform: { '.*': 'babel-jest' },
-        setupTestFrameworkScriptFile: path.resolve(__dirname, 'setup.js'),
+        setupFilesAfterEnv: [path.resolve(__dirname, 'setup.js')],
         collectCoverage: !isTestingBuild,
         coverageDirectory: 'tests_results/coverage',
         reporters: ['default', 'jest-junit'],
