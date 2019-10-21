@@ -11,7 +11,7 @@ module.exports = (testing = 'source', settings) => {
     const isTestingBuild = testing === 'bundle' || testing === 'build';
     const transformIgnoredPackages = ['@socifi/([a-z]|-)*'];
 
-    process.env.JEST_JUNIT_OUTPUT = `./tests_results/unit/junit${isTestingBuild ? '-bundle' : ''}.xml`;
+    process.env.JEST_JUNIT_OUTPUT_DIR = './tests_results/unit/';
 
     return {
         transform: { '.*': 'babel-jest' },
