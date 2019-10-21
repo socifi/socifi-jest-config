@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 
+## [2.4.1] 2019-10-21
+### Fixed
+- Directory for unit test file
+
 ## [2.4.0] 2019-10-21
 ### Fixed
 - Lints
