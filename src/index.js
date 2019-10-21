@@ -1,4 +1,3 @@
-// eslint-disable-next-line typescript/no-var-requires
 const path = require('path');
 
 /**
@@ -26,7 +25,7 @@ module.exports = (testing = 'source', settings) => {
         moduleDirectories: ['node_modules', 'src'],
         testMatch: ['<rootDir>/tests/**/*.test.*'],
         transformIgnorePatterns: [
-            `<rootDir>/node_modules/(?!(${transformIgnoredPackages.map(item => `${item}/src`).join('|')})/)`,
+            `<rootDir>/node_modules/(?!(${transformIgnoredPackages.map((item) => `${item}/src`).join('|')})/)`,
             '<rootDir>/dist',
         ],
         moduleNameMapper: {
