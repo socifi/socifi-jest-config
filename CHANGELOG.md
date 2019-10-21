@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 
 
+## [2.4.0] 2019-10-21
+### Fixed
+- Lints
+
+### Changed
+- Update libraries
+
 ## [2.3.1] 2019-03-19
 ### Fixed
 - Versioning of libraries
